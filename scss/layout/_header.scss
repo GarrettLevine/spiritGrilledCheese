@@ -1,0 +1,63 @@
+.header {
+	padding-top: 5rem;
+	text-align: center;
+
+	&__heading,
+	&__subHeading {
+		color: $white;
+		letter-spacing: $letter-spacing;
+		text-shadow: -1px 7px 0 #af3319;
+	}
+	&__subHeading {
+		margin-top: -0.5rem;
+		display: inline-block;
+		position: relative;
+		&::before {
+			content: url(../assets/icons/dblLine.svg);
+			position: absolute;
+			display: block;
+			left: -7rem;
+			top: -2.3rem;
+			transform: scale(2);
+			@include mq(small) {
+				display: none;
+			}
+		}
+		&::after {
+			content: url(../assets/icons/dblLine.svg);
+			position: absolute;
+			display: block;
+			right: -6.2rem;
+			top: -2.3rem;
+			transform: scale(2);
+			@include mq(small) {
+				display: none;
+			}
+		}
+	}
+
+	&__specialHeading {
+		font-family: $font-family--fancy;
+		letter-spacing: $letter-spacing;
+		color: $secondary-color;
+		font-size: 12rem;
+		text-shadow: none;
+
+		display: block;
+		padding: 0.5rem;
+		opacity: 0.8;
+		margin: 0;
+
+		@include mq(small) {
+			font-size: 8rem;
+		}
+	}
+}
+
+.quizHeader {
+	display: none;
+}
+
+.answerHeader {
+	display: block;
+}

@@ -1,0 +1,44 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+}
+
+
+a {
+	text-decoration: none;
+	transition: color 0.5s;
+
+	&:visited {
+		color: $white;
+	}
+}
+
+li {
+	list-style-type: none;
+}
+
+
+h1, h2, h3, h4 {
+	text-transform: uppercase;
+	font-family: $font-family--primary;
+	margin: 0;
+}
+
+p {
+	font-family: $font-family--secondary;
+}
+//SET THE HEADING SIZES
+@each $heading, $size in $heading-list {
+	#{$heading} {
+		font-size: $size;
+	}
+} //end of @each $headings

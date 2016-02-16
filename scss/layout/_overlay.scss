@@ -1,0 +1,176 @@
+.answer {
+	padding-bottom: 4rem;
+	display: none;
+	&__gcTitleContainer {
+		position: relative;
+		padding: 2rem 0;
+
+		@include mq(small) {
+			width: 100%;
+		}
+		h4{
+			
+			text-shadow:  0 2px 4px rgba(0,0,0,0.5);
+			font-family: $font-family--fancy;
+			font-size: 3.8rem;
+			text-align: center;
+			color: $white;
+			background-color: #af3319;
+			display: inline-block;
+			padding: 2rem;
+			box-shadow: 0 2px 4px rgba(0,0,0, 0.5);
+			position: absolute;;
+			z-index: 10;
+			top: 0;
+			left: 50%;
+			transform: translate(-50%, 0);
+			@include mq(medium) {
+				font-size: 2.8rem;
+				width: 100%;
+			}
+
+			@include mq(small) {
+				width: 100%;
+				font-size: 2.2rem;
+			}
+		}
+	}  
+	&__imageContainer {
+		position: relative;
+		box-shadow: -1px 3px 8px rgba(0,0,0, 0.5);
+
+		@include mq(small) {
+			height: 90vh;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			display: block;
+
+		}
+		button {
+			position: absolute; 
+			padding: 0;
+			right: 1rem;
+			bottom: 5rem;
+			transform: scale(1.8);
+			border: none;
+			transition: all 0.5s;
+			z-index: 900;
+
+			@include mq(small) {
+				top: 7rem;
+				right: 3rem;
+				width: 50px;
+				transform: scale(1.4);
+			}
+		}
+	}
+	&__description {
+		position: relative;
+		&::before{
+			position: absolute;
+			top: 2rem;
+			left: 50%;
+			content: url(../assets/icons/dblLine.svg);
+			display: block;
+			transform: scale(2.5) translateX(-25%);	
+			}
+			/* style */
+		p{
+			width: 80%;
+			margin: auto;
+			padding: 6rem 0 1rem 0;
+			color: $white;
+			font-family: $font-family--primary;
+			font-size: 2.4rem;
+			text-shadow: 0 2px 4px rgba(0,0,0, 0.5);
+			text-align: center;
+		}
+	}
+}
+
+.image__infoOverlay {
+	position: absolute;
+	top: 3rem;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+
+	letter-spacing: $letter-spacing;
+	padding: 11.5rem 0;
+
+	display: none;
+
+	background-color: rgba(4, 0, 0, .75);
+
+	@include mq(medium) {
+		padding-top: 6rem;
+	}
+
+	@include mq(small) {
+		padding-top: 6rem;
+	}
+
+	h3 {
+		color: $white;
+		font-family: $font-family--primary;
+		font-size: 34px;
+		letter-spacing: 0.5px;
+		@include mq(medium) {
+			margin-bottom: 2.5rem;
+			font-size: 2.4rem;
+		}
+		@include mq(small) {
+					margin-bottom: 2.5rem;
+					font-size: 1.8rem;
+				}
+	}
+	h4 {
+		color: $white;
+		font-size: 34px;
+		font-family: $font-family--secondary;
+		@include mq(medium) {
+			margin-bottom: 0.5rem;
+			font-size: 2.4rem;
+		}
+		@include mq(small) {
+					margin-bottom: 2.5rem;
+					font-size: 1.8rem;
+				}
+	}
+	p {
+		color: $tertiary-color;
+		font-size: 25px;
+		font-family: $font-family--secondary;
+		font-weight: 400;
+		letter-spacing: 0;
+		@include mq(medium) {
+			margin-bottom: 3.5rem;
+			font-size: 2rem;
+		}
+		@include mq(small) {
+					margin-bottom: 2rem;
+					font-size: 1.8rem;
+				}
+	}
+}
+
+.answerHeader  {
+	display: none;
+	h2 {
+		text-shadow:  0 2px 4px rgba(0,0,0,0.5);
+	}
+	span {
+		display: inline-block;
+		color: #af3319;
+		opacity: 1;
+		font-size: 5rem;
+	}
+}
+
+.quizHeader {
+	display: block;
+}

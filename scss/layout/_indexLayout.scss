@@ -1,0 +1,52 @@
+body {
+	background-color: $primary-color;
+}
+
+.header__wrapper, 
+.main__wrapper {
+	max-width: $max-width--desktop;
+	margin: auto;
+}
+
+.fa-arrow-circle-o-left {
+	position: relative;
+	top: -14.5rem;
+	opacity: 0.4;
+	font-size: 3.5rem;
+	color: $secondary-color;
+
+	&:hover {
+		opacity: 1;
+	}
+
+	@include mq(medium) {
+		display: none;
+	}
+	@include mq(small) {
+		display: none;
+	}
+}
+
+.resetButton {
+	background-color: #af3319;
+	border: none;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	display: inline-block;
+	color: $white;
+	padding: 2.5rem;
+	font-size: 2.4rem;
+	p{
+		transform: translateY(-50%);
+		font-family: $font-family--fancy;
+
+
+	}
+	&:hover  {
+		box-shadow: 0 0 4px rgba(0,0,0,0.5);
+		p {
+			color: $tertiary-color;
+		}
+	}
+}
