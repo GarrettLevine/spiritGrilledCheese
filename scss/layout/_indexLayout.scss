@@ -1,7 +1,9 @@
 body {
 	background-color: $primary-color;
 }
-
+.main {
+	padding: 4% 0 15%;
+}
 .header__wrapper, 
 .main__wrapper {
 	max-width: $max-width--desktop;

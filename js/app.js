@@ -21,8 +21,6 @@ $('input[type=radio]').on('click', function(){
 
 	//on click of last question
 	var grandParents = $(this).parents().parents().attr('class');
-	console.log(grandParents);
-	console.log(grandParents == 'questionGroup6');
 		//submit form
 		if (grandParents == 'questionGroup6') {
 			//show the overlay
@@ -45,21 +43,20 @@ $('.backButton').on('click', function() {
 
 //on submit
 $('.form').on('submit', function(e){
-	console.log('form submitted!');
 	//Grab the input with the class selected
 	e.preventDefault();
 	var selectedArray = $('.selected');
-	console.log(selectedArray);
+
 	playerScore = grabData();
-	console.log(playerScore);
+
 // then take playersScore and pair it with a grilled cheese
 	var gcChoice = grilledCheese[playerScore];
-	console.log(gcChoice);
+
 
 	//creating a title and adding it the screen
 	var title = gcChoice.title;
 	titleString = "<h4 class=\"grilledCheese__title\">\" " + title +" \"</h4>";
-	console.log(titleString);
+
 	$('.answer__gcTitleContainer').html(titleString);
 
 	//finding the image and adding it the screen
